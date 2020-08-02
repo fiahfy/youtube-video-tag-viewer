@@ -1,0 +1,20 @@
+.yvtv-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.yvtv-tags-container > div {
+  margin: 0 4px 4px 0 !important;
+  cursor: pointer;
+}
+.yvtv-tags-container > div > div {
+  white-space: nowrap;
+}
+
+.yvtv-tags-container.yvtv-no-tags {
+  color: var(--yt-spec-text-secondary);
+  font-size: larger;
+}
+.yvtv-tags-container.yvtv-no-tags > div {
+  cursor: unset;
+}
