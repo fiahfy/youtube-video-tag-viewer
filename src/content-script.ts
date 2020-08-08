@@ -100,6 +100,5 @@ browser.runtime.onMessage.addListener(async (message) => {
 })
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await browser.runtime.sendMessage({ id: 'contentLoaded' })
   await setup()
 })

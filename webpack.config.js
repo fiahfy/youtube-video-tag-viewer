@@ -62,6 +62,7 @@ module.exports = {
             )
           },
         },
+        'content-script.css',
       ],
     }),
     new VueLoaderPlugin(),
