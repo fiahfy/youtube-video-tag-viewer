@@ -20,7 +20,7 @@
     "@fiahfy/eslint-config-vue": "^0.0.7",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
-    "eslint": "^7.6.0",
+    "eslint": "^7.7.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",

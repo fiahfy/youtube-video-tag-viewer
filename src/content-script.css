@@ -3,18 +3,15 @@
   flex-wrap: wrap;
   margin-top: 8px;
 }
-.yvtv-tags-container > div {
+.yvtv-tags-container > a {
   margin: 0 4px 4px 0 !important;
-  cursor: pointer;
-}
-.yvtv-tags-container > div > div {
+  text-decoration: none;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .yvtv-tags-container.yvtv-no-tags {
   color: var(--yt-spec-text-secondary);
   font-size: larger;
-}
-.yvtv-tags-container.yvtv-no-tags > div {
-  cursor: unset;
 }

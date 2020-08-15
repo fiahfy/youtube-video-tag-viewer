@@ -34,28 +34,21 @@ const getTags = async () => {
 }
 
 const createLabel = (tag: string) => {
-  const span = document.createElement('div')
-  span.classList.add('style-scope', 'ytd-badge-supported-renderer')
-  span.textContent = tag
-
-  const div = document.createElement('div')
-  div.classList.add(
+  const a = document.createElement('a')
+  a.classList.add(
     'badge',
     'badge-style-type-simple',
-    'style-scope',
     'ytd-badge-supported-renderer'
   )
-  div.onclick = () => {
-    location.href = `/results?search_query=${tag}`
-  }
-  div.append(span)
-
-  return div
+  a.href = `/results?search_query=${tag}`
+  a.textContent = tag
+  return a
 }
 
 const renderTags = async () => {
-  const oldContainer = document.querySelector(`.${ClassName.container}`)
-  oldContainer && oldContainer.remove()
+  document
+    .querySelectorAll(`.${ClassName.container}`)
+    .forEach((e) => e.remove())
 
   const info = await querySelectorAsync(
     'ytd-video-primary-info-renderer > #container > #info'
@@ -83,7 +76,7 @@ const renderTags = async () => {
   info.parentElement?.insertBefore(container, info)
 }
 
-const setup = async () => {
+const init = async () => {
   if (!isVideoUrl()) {
     return
   }
@@ -95,10 +88,10 @@ browser.runtime.onMessage.addListener(async (message) => {
   const { id } = message
   switch (id) {
     case 'urlChanged':
-      return await setup()
+      return await init()
   }
 })
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await setup()
+  await init()
 })
