@@ -8,6 +8,7 @@
     "url": "https://fiahfy.github.io/"
   },
   "dependencies": {
+    "@fiahfy/semaphore": "^0.0.1",
     "@vue/composition-api": "^0.6.7",
     "vue": "^2.6.12",
     "vuetify": "^2.3.10",

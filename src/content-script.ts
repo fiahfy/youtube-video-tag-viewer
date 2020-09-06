@@ -1,10 +1,12 @@
 import { browser } from 'webextension-polyfill-ts'
+import { semaphore } from '@fiahfy/semaphore'
 
 const ClassName = {
   container: 'yvtv-tags-container',
   noTags: 'yvtv-no-tags',
 }
 
+const s = semaphore()
 const isVideoUrl = () => new URL(location.href).pathname === '/watch'
 
 const querySelectorAsync = (
@@ -80,8 +82,9 @@ const init = async () => {
   if (!isVideoUrl()) {
     return
   }
-
-  await renderTags()
+  await s.acquire(async () => {
+    await renderTags()
+  })
 }
 
 browser.runtime.onMessage.addListener(async (message) => {
