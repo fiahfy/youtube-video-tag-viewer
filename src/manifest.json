@@ -15,8 +15,6 @@
       "css": ["content-script.css"]
     }
   ],
-  "permissions": [
-    "https://www.youtube.com/*"
-  ],
+  "permissions": ["https://www.youtube.com/*"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
