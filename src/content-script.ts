@@ -26,7 +26,7 @@ const querySelectorAsync = (
   })
 }
 
-const getTags = async () => {
+const fetchTags = async () => {
   const res = await fetch(location.href)
   const text = await res.text()
   const doc = new DOMParser().parseFromString(text, 'text/html')
@@ -62,7 +62,7 @@ const renderTags = async () => {
   const container = document.createElement('div')
   container.classList.add(ClassName.container)
 
-  const tags = await getTags()
+  const tags = await fetchTags()
 
   if (tags.length) {
     for (const tag of tags) {

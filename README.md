@@ -6,7 +6,7 @@
 
 ## Features
 
-- Show tags for current viewing video.
+- Display meta tags for current viewing video.
 
 ## Screenshots
 
