@@ -1,4 +1,3 @@
-import browser from 'webextension-polyfill'
 import { semaphore } from '@fiahfy/semaphore'
 
 const ClassName = {
@@ -36,13 +35,14 @@ const fetchTags = async () => {
 }
 
 const createLabel = (tag: string) => {
+  const encoded = encodeURIComponent(tag)
   const a = document.createElement('a')
   a.classList.add(
     'badge',
     'badge-style-type-simple',
     'ytd-badge-supported-renderer'
   )
-  a.href = `/results?search_query=${tag}`
+  a.href = `/results?search_query=${encoded}`
   a.textContent = tag
   return a
 }
@@ -87,11 +87,12 @@ const init = async () => {
   })
 }
 
-browser.runtime.onMessage.addListener(async (message) => {
-  const { id } = message
-  switch (id) {
-    case 'urlChanged':
-      return await init()
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  const { type } = message
+  switch (type) {
+    case 'url-changed':
+      init().then(() => sendResponse())
+      return true
   }
 })
 

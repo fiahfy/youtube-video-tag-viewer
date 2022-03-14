@@ -1,9 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
   context: `${__dirname}/src`,
   entry: {
@@ -20,37 +18,6 @@ module.exports = {
       {
         test: /\.ts$/,
         loader: 'ts-loader',
-        options: {
-          appendTsSuffixTo: [/\.vue$/],
-        },
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-      },
-      {
-        test: /\.s(c|a)ss$/,
-        use: [
-          'vue-style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              esModule: false,
-            },
-          },
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.(css|jpg|gif|png|woff|woff2|eot|ttf)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'assets/[name].[ext]',
-        },
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader',
       },
     ],
   },
@@ -74,15 +41,12 @@ module.exports = {
         'content-script.css',
       ],
     }),
-    new VueLoaderPlugin(),
-    new VuetifyLoaderPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.ts', '.vue'],
+    extensions: ['.js', '.ts'],
     alias: {
-      '~~': `${__dirname}/`,
       '~': `${__dirname}/src/`,
-      vue$: 'vue/dist/vue.esm.js',
+      '~~': `${__dirname}/`,
     },
   },
 }

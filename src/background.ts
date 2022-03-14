@@ -1,7 +1,5 @@
-import browser from 'webextension-polyfill'
-
-browser.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
+chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
   if (changeInfo.url) {
-    browser.tabs.sendMessage(tabId, { id: 'urlChanged' })
+    await chrome.tabs.sendMessage(tabId, { type: 'url-changed' })
   }
 })

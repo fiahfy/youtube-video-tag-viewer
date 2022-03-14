@@ -3,12 +3,13 @@
   flex-wrap: wrap;
   margin-top: 8px;
 }
+
 .yvtv-tags-container > a {
   margin: 0 4px 4px 0 !important;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .yvtv-tags-container.yvtv-no-tags {
