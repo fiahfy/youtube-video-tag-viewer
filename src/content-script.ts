@@ -11,7 +11,7 @@ const isVideoUrl = () => new URL(location.href).pathname === '/watch'
 const querySelectorAsync = (
   selector: string,
   interval = 100,
-  timeout = 1000
+  timeout = 10000
 ) => {
   return new Promise<Element | null>((resolve) => {
     const expireTime = Date.now() + timeout
@@ -52,9 +52,7 @@ const renderTags = async () => {
     .querySelectorAll(`.${ClassName.container}`)
     .forEach((e) => e.remove())
 
-  const info = await querySelectorAsync(
-    'ytd-video-primary-info-renderer > #container > #info'
-  )
+  const info = await querySelectorAsync('#above-the-fold > #top-row')
   if (!info) {
     return
   }
