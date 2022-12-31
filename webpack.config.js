@@ -9,9 +9,8 @@ module.exports = {
     'content-script': './content-script',
   },
   output: {
-    path: `${__dirname}/app/`,
+    path: `${__dirname}/app`,
     filename: '[name].js',
-    publicPath: './',
   },
   module: {
     rules: [
