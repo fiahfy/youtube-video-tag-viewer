@@ -1,4 +1,5 @@
 import { semaphore } from '@fiahfy/semaphore'
+import './content-script.css'
 
 const ClassName = {
   container: 'yvtv-tags-container',
@@ -94,6 +95,4 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   }
 })
 
-document.addEventListener('DOMContentLoaded', async () => {
-  await init()
-})
+init()
