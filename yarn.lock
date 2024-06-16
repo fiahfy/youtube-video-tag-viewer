@@ -190,11 +190,6 @@
   resolved "https://registry.yarnpkg.com/@fiahfy/semaphore/-/semaphore-0.0.2.tgz#f3121454fd03ac1ba35ee6cf6b2ae2d1a0d7d117"
   integrity sha512-dkxuLmntMXqE6VaLE7PnJiCMqGKm3P7B7PQcwNqIj7rrAYXT00MSYnBQ66TDrrq6vY2gmbkOqc7KB8gCsLQUdw==
 
-"@fiahfy/tsconfig@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@fiahfy/tsconfig/-/tsconfig-0.0.2.tgz#c4950a18ac2ee756ba7468e746cb4f710e486230"
-  integrity sha512-xd7s8E0KkCnG952csB3a57MSvH+lnW8c+HEVydCPOdAH65r1mu66ApoJPIfPucD/4DiHG4Bcpjre6ZtjVyBSVQ==
-
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"
@@ -322,6 +317,11 @@
   version "4.18.0"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.18.0.tgz#5d694d345ce36b6ecf657349e03eb87297e68da4"
   integrity sha512-UOo5FdvOL0+eIVTgS4tIdbW+TtnBLWg1YBCcU2KWM7nuNwRz9bksDX1bekJJCpu25N1DVWaCwnT39dVQxzqS8g==
+
+"@tsconfig/vite-react@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/vite-react/-/vite-react-3.0.2.tgz#e49e4be4ee88858552316d22abafc95cd9e57958"
+  integrity sha512-AFynAtE1Un3Rko20Ghe2mVC/QWD4rStJ2PnyIZU2kzC4UyWpf1YhAEY87GojH/XPZCY8Mdt27gsYyy+6l6HV+w==
 
 "@types/chrome@^0.0.268":
   version "0.0.268"
