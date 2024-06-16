@@ -12,7 +12,7 @@ const isVideoUrl = () => new URL(location.href).pathname === '/watch'
 const querySelectorAsync = (
   selector: string,
   interval = 100,
-  timeout = 10000
+  timeout = 10000,
 ) => {
   return new Promise<Element | null>((resolve) => {
     const expireTime = Date.now() + timeout
@@ -31,7 +31,7 @@ const fetchTags = async () => {
   const text = await res.text()
   const doc = new DOMParser().parseFromString(text, 'text/html')
   return Array.from(doc.querySelectorAll('meta[property="og:video:tag"]')).map(
-    (meta) => (meta as HTMLMetaElement).content
+    (meta) => (meta as HTMLMetaElement).content,
   )
 }
 
@@ -41,7 +41,7 @@ const createLabel = (tag: string) => {
   a.classList.add(
     'badge',
     'badge-style-type-simple',
-    'ytd-badge-supported-renderer'
+    'ytd-badge-supported-renderer',
   )
   a.href = `/results?search_query=${encoded}`
   a.textContent = tag

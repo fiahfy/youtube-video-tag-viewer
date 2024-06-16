@@ -6,17 +6,17 @@
     "@fiahfy/semaphore": "^0.0.2"
   },
   "devDependencies": {
-    "@crxjs/vite-plugin": "^2.0.0-beta.16",
-    "@fiahfy/eslint-config": "^0.0.20",
+    "@crxjs/vite-plugin": "^2.0.0-beta.23",
+    "@fiahfy/eslint-config": "^0.1.1",
     "@fiahfy/prettier-config": "^0.0.3",
     "@fiahfy/tsconfig": "^0.0.2",
-    "@types/chrome": "^0.0.235",
-    "eslint": "^8.39.0",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.4",
-    "vite-tsconfig-paths": "^4.2.0"
+    "@types/chrome": "^0.0.268",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "private": true,
   "productName": "Video Tag Viewer for YouTube",
@@ -24,10 +24,11 @@
     "build": "tsc && vite build",
     "dev": "vite",
     "format": "prettier -c --ignore-path .gitignore .",
-    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "lint": "eslint .",
     "package": "zip -r extension.zip dist",
-    "prepare": "husky install",
-    "test": "npm run format && npm run lint"
+    "prepare": "husky",
+    "test": "npm run format && npm run lint && npm run type-check",
+    "type-check": "tsc"
   },
   "type": "module"
 }
