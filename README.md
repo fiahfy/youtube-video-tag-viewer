@@ -1,6 +1,6 @@
 # Video Tag Viewer for YouTube
 
-![badge](https://github.com/fiahfy/youtube-video-tag-viewer/workflows/Create%20Release/badge.svg)
+[![Create Release](https://github.com/fiahfy/youtube-video-tag-viewer/actions/workflows/create-release.yml/badge.svg)](https://github.com/fiahfy/youtube-video-tag-viewer/actions/workflows/create-release.yml)
 
 > Chrome Extension for Viewing Video Tags on YouTube.
 

@@ -29,10 +29,10 @@ const querySelectorAsync = (
 const fetchTags = async () => {
   const res = await fetch(location.href)
   const text = await res.text()
-  const doc = new DOMParser().parseFromString(text, 'text/html')
-  return Array.from(doc.querySelectorAll('meta[property="og:video:tag"]')).map(
-    (meta) => (meta as HTMLMetaElement).content,
-  )
+  const document = new DOMParser().parseFromString(text, 'text/html')
+  return Array.from(
+    document.querySelectorAll('meta[property="og:video:tag"]'),
+  ).map((meta) => (meta as HTMLMetaElement).content)
 }
 
 const createLabel = (tag: string) => {
@@ -49,9 +49,12 @@ const createLabel = (tag: string) => {
 }
 
 const renderTags = async () => {
-  document
-    .querySelectorAll(`.${ClassName.container}`)
-    .forEach((e) => e.remove())
+  const elements = Array.from(
+    document.querySelectorAll(`.${ClassName.container}`),
+  )
+  for (const element of elements) {
+    element.remove()
+  }
 
   const info = await querySelectorAsync('#above-the-fold > #top-row')
   if (!info) {
