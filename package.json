@@ -13,7 +13,7 @@
     "@types/chrome": "^0.0.308",
     "husky": "^9.1.7",
     "typescript": "^5.8.2",
-    "vite": "^6.2.0",
+    "vite": "^6.2.7",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "packageManager": "yarn@4.5.0",
