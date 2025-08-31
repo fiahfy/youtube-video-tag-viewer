@@ -5,6 +5,7 @@
 }
 
 .yvtv-tags-container > a {
+  /* biome-ignore lint/complexity/noImportantStyles: false positive */
   margin: 0 4px 4px 0 !important;
   overflow: hidden;
   text-decoration: none;
