@@ -1,5 +1,5 @@
 import { semaphore } from '@fiahfy/semaphore'
-import './content-script.css'
+import '~/content-script.css'
 
 const ClassName = {
   container: 'yvtv-tags-container',
