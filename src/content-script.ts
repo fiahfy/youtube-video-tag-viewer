@@ -7,6 +7,7 @@ const ClassName = {
 }
 
 const s = semaphore()
+
 const isVideoUrl = () => {
   const pathname = new URL(location.href).pathname
   return ['^/watch', '^/live/.*', '^/@.*/live'].some((p) =>
