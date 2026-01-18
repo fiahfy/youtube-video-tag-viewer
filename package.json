@@ -1,7 +1,7 @@
 {
   "name": "youtube-video-tag-viewer",
   "description": "Chrome extension for viewing video tags on YouTube.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "dependencies": {
     "@fiahfy/semaphore": "0.0.2"
   },
